@@ -8,8 +8,6 @@ export default class Cuaca extends Component {
     this.state = {
       kota: '',
       forecast: {
-        main: '',
-        description: '',
         temp: 0
       }
     };
@@ -62,14 +60,12 @@ fetch (url)
                 () => this.getWeather()
               }
               title="Lihat"
-              color="#0D47A1"
               accessibilityLabel="Klik untuk melihat"
             />
           </View>
       </View>
 
       <View style={styles.Hasil}>
-
           <View style={styles.box31}>
             <View style={styles.box312}>
               <Text style={styles.text3}>Temp : {this.state.forecast.temp} {'°C'}</Text>
@@ -157,7 +153,11 @@ const styles = StyleSheet.create({
   buttonStyle: {
     flex: 1,
     margin: 10,
-    justifyContent: 'center'
+    justifyContent: 'center',
+    borderColor: 'transparent',
+    borderWidth: 0,
+    borderRadius: 5,
+    color: '#0D47A1'
   },
   textBox: {
     margin: 10,
