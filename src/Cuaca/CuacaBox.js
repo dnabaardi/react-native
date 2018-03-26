@@ -25,7 +25,14 @@ fetch (url)
               forecast: {
                 main: responseJson.weather[0].main,
                 description: responseJson.weather[0].description,
-                temp: responseJson.main.temp
+                temp: responseJson.main.temp,
+                pressure: responseJson.main.pressure,
+                humidity: responseJson.main.humidity,
+                sunrise: responseJson.sys.sunrise,
+                sunset: responseJson.sys.sunset,
+                speed: responseJson.wind.speed,
+                sea_level: responseJson.main.sea_level,
+                grnd_level: responseJson.main.grnd_level
               }
             });
           });
@@ -65,39 +72,39 @@ fetch (url)
 
           <View style={styles.box31}>
             <View style={styles.box312}>
-              <Text style={styles.text3}>Kota = {this.state.kota}</Text>
+              <Text style={styles.text3}>Temp : {this.state.forecast.temp} {'°C'}</Text>
             </View>
             <View style={styles.box312}>
-              <Text style={styles.text3}>Cuaca = {this.state.forecast.main}</Text>
+              <Text style={styles.text3}>Main : {this.state.forecast.main}</Text>
             </View>
             <View style={styles.box312}>
-              <Text style={styles.text3}>Deskripsi = {this.state.forecast.description}</Text>
+              <Text style={styles.text3}>Sunrise : {this.state.forecast.sunrise}</Text>
             </View>
             <View style={styles.box312}>
-              <Text style={styles.text3}>Temp = {this.state.forecast.temp} {'°C'}</Text>
+              <Text style={styles.text3}>Pressure : {this.state.forecast.pressure}</Text>
             </View>
             <View style={styles.box312}>
-              <Text style={styles.text3}>Temp = {this.state.forecast.temp}</Text>
+              <Text style={styles.text3}>Sea Level : {this.state.forecast.sea_level}</Text>
             </View>
           </View>
 
-        <View style={styles.box31}>
-          <View style={styles.box312}>
-            <Text style={styles.text3}>Kota = {this.state.kota}</Text>
+          <View style={styles.box31}>
+            <View style={styles.box312}>
+              <Text style={styles.text3}>Wind Speed : {this.state.forecast.speed}</Text>
+            </View>
+            <View style={styles.box312}>
+              <Text style={styles.text3}>Main Desc : {this.state.forecast.description}</Text>
+            </View>
+            <View style={styles.box312}>
+              <Text style={styles.text3}>sunset : {this.state.forecast.sunset}</Text>
+            </View>
+            <View style={styles.box312}>
+              <Text style={styles.text3}>Humidity : {this.state.forecast.humidity}</Text>
+            </View>
+            <View style={styles.box312}>
+              <Text style={styles.text3}>Ground Level : {this.state.forecast.grnd_level}</Text>
+            </View>
           </View>
-          <View style={styles.box312}>
-            <Text style={styles.text3}>Cuaca = {this.state.forecast.main}</Text>
-          </View>
-          <View style={styles.box312}>
-            <Text style={styles.text3}>Deskripsi = {this.state.forecast.description}</Text>
-          </View>
-          <View style={styles.box312}>
-            <Text style={styles.text3}>Temp = {this.state.forecast.temp} {'°C'}</Text>
-          </View>
-          <View style={styles.box312}>
-            <Text style={styles.text3}>Temp = {this.state.forecast.temp}</Text>
-          </View>
-        </View>
       </View>
 
       <View style={styles.Footer}>
