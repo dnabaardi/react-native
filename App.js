@@ -2,9 +2,7 @@ import React, { Component } from 'react';
 import {
 
 } from 'react-native';
-import Layout from './src/Latihan/Layout';
-import VolumeBalok from './src/Latihan/VolumeBalok';
-import Cuaca from './src/Cuaca/Cuaca';
+import MerkHp from './src/Uts/MerkHp';
 
 
 export default class App extends Component {
@@ -12,7 +10,7 @@ export default class App extends Component {
   render() {
     return (
 
-        <Layout />
+        <MerkHp />
 
     );
   }
